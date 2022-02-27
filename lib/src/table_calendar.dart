@@ -602,7 +602,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
           calendarBuilders: widget.calendarBuilders,
           isTodayHighlighted: widget.calendarStyle.isTodayHighlighted,
           isToday: isToday,
-          isSelected: widget.selectedDayPredicate?.call(day) ?? false,
+          isSelected: !isOutside && (widget.selectedDayPredicate?.call(day) ?? false),
           isRangeStart: isRangeStart,
           isRangeEnd: isRangeEnd,
           isWithinRange: isWithinRange,
