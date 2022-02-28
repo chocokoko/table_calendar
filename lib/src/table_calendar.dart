@@ -600,7 +600,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
           focusedDay: focusedDay,
           calendarStyle: widget.calendarStyle,
           calendarBuilders: widget.calendarBuilders,
-          isTodayHighlighted: widget.calendarStyle.isTodayHighlighted,
+          isTodayHighlighted: !isOutside && (widget.calendarStyle.isTodayHighlighted),
           isToday: isToday,
           isSelected: !isOutside && (widget.selectedDayPredicate?.call(day) ?? false),
           isRangeStart: isRangeStart,
